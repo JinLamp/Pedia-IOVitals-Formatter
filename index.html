@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Vitals Formatter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dark">
+  <div class="container">
+    <h1>Patient Vitals Formatter</h1>
+    <button onclick="toggleMode()">Toggle Light/Dark Mode</button>
+    <form id="vitalsForm">
+      <div class="grid">
+        <label>Oral Input: <input type="number" id="oral" /></label>
+        <label>IVF Input: <input type="number" id="ivf" /></label>
+        <label>Total Output: <input type="number" id="totalOutput" /></label>
+        <label>Urine Output: <input type="number" id="uo" /></label>
+        <label>Weight (kg): <input type="number" id="weight" /></label>
+        <label>Hours: <input type="number" id="hours" /></label>
+        <label>BP: <input type="text" id="bp" /></label>
+        <label>HR: <input type="number" id="hr" /></label>
+        <label>RR: <input type="number" id="rr" /></label>
+        <label>Temp (°C): <input type="text" id="temp" /></label>
+        <label>SpO2: <input type="text" id="spo2" /></label>
+      </div>
+      <button type="button" onclick="generateOutput()">Generate</button>
+      <button type="button" onclick="clearFields()">Clear</button>
+    </form>
+    <textarea id="outputText" rows="12" readonly></textarea>
+    <button onclick="copyToClipboard()">Copy</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
